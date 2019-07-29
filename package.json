@@ -1,0 +1,30 @@
+{
+  "name": "node.js-redis-app-from-scratch",
+  "version": "1.0.0",
+  "description": "User management application using Node.js and Redis which is an open source database/caching system. We will be able to add users to the system and search for them by id",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hazooma/Node.js-Redis-App-From-Scratch.git"
+  },
+  "author": "Hazem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hazooma/Node.js-Redis-App-From-Scratch/issues"
+  },
+  "homepage": "https://github.com/hazooma/Node.js-Redis-App-From-Scratch#readme",
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "method-override": "^3.0.0",
+    "nodemon": "^1.19.1",
+    "redis": "^2.8.0"
+  }
+}
