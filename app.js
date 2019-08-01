@@ -33,7 +33,30 @@ app.get("/", (req, res, next) => {
 
 app.post("/users/serach", (req, res, next) => {
   let id = req.body.id;
+  client.hgetall(id, (err, obj) => {
+    if (!obj) {
+      res.render("searchusers", { error: "User Not Found !" });
+    } else {
+      obj.id = id;
+      res.render("details", { user: obj });
+    }
+  });
 });
+
+app.get("/addusers", (req, res, next) => {
+  res.render("addusers");
+});
+
+app.post("/addusers", (req, res, next) => {
+  let username = req.body.username;
+  let email = req.body.email;
+  client.hmset(4, "username", username, "email", email, err => {
+    if (!err) {
+      console.log("added");
+    }
+  });
+});
+
 app.listen(PORT, error => {
   if (error) console.log(error);
   else console.log("conncted");
